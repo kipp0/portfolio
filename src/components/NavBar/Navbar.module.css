@@ -1,0 +1,4 @@
+.menu:hover a:not(:hover) {
+    color: rgba(55, 65, 81, .5);
+    transition: all .5s ease-in;
+}

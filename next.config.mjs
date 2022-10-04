@@ -13,6 +13,11 @@ function defineNextConfig(config) {
 }
 
 export default defineNextConfig({
+  images: {
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    domains: ["tailwindui.com"],
+  },
   reactStrictMode: true,
   swcMinify: true,
   // Next.js i18n docs: https://nextjs.org/docs/advanced-features/i18n-routing
