@@ -1,5 +1,7 @@
+import React from "react"
 
-function Icon(props: any) {
+type IconProps = React.HTMLProps<HTMLDivElement>
+function Icon( props: IconProps ) {
     return <div {...props} />
 }
 
