@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 // import { Disclosure, Menu, Transition } from '@headlessui/react'
 // import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
-import Me from '../../assets/Me.jpeg'
+import Me from './../../../public/assets/images/me.jpeg'
 import NavbarBrand from "./NavbarBrand";
 import NavLink from "./NavLink.tsx/NavLink";
 import styles from './Navbar.module.css'

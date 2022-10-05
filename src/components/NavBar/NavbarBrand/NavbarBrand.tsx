@@ -8,7 +8,7 @@ import { LinkProps } from "../../../types/primitives";
 type NavBarBrandProps = {
     image?: boolean,
     brandName: string,
-    brandImage: StaticImageData,
+    brandImage: StaticImageData | string,
 }
 
 function NavbarBrand( { image = true, brandName, brandImage, ...rest }: NavBarBrandProps ) {
