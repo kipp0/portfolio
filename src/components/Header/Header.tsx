@@ -12,7 +12,7 @@ const navigation = [
 function Header( { className, children }: React.HTMLProps<HTMLDivElement> ) {
     const classes = className ?? ''
     return (
-        <header className={helpers.join.classNames( classes, 'pointer-event-none relative z-50' )}>
+        <header className={helpers.join.classNames( classes, 'pb-4 pointer-event-none relative z-50' )}>
             <NavBar key='PageNav' navigationLinks={navigation} />
             {children}
         </header>
