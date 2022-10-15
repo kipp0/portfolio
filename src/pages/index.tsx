@@ -4,8 +4,8 @@ import Header from "../components/Header";
 import Image from 'next/future/image'
 import geekpower from '../assets/geekpower.svg'
 import Me from '../assets/me.jpeg'
-import WorkHistoryCards, { WorkHistory } from "../components/WorkHistoryCards/WorkHistoryCards";
-const work: WorkHistory[] = [
+import WorkHistoryCards from "../components/WorkHistoryCards";
+const work: WorkHistoryCards.WorkHistory[] = [
   {
     logo: '',
     company: 'Webbly',
@@ -135,7 +135,7 @@ const Home: NextPage = () => {
               {
                 work.map( work => (
                   <li className="flex gap-4" key={work.company}>
-                    <WorkHistoryCards
+                    <WorkHistoryCards.default
                       work={work} />
                   </li>
 

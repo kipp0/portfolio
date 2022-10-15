@@ -1,3 +1,2 @@
-import TechCard from './TechCard';
-
-export default TechCard;
+import * as workHistoryExports from './WorkHistoryCards';
+export default workHistoryExports;
