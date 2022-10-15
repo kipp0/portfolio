@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-// import { useState } from "react";
 // import { Disclosure } from '@headlessui/react'
 // import { Disclosure, Menu, Transition } from '@headlessui/react'
 // import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -10,7 +9,7 @@ import NavLink from "./NavLink.tsx/NavLink";
 import styles from './Navbar.module.css'
 import helpers from "../../helpers";
 
-type NavBarProps = {
+type NavbarProps = {
     navigationLinks: {
         name: string,
         href: string,
@@ -18,13 +17,12 @@ type NavBarProps = {
     }[]
 } & React.HTMLProps<HTMLDivElement>
 
-function Nav( { navigationLinks }: NavBarProps ) {
-    // const { isOpen, setIsOpen } = useState(false)
+function Navbar( { navigationLinks }: NavbarProps ) {
     const router = useRouter()
 
     return (
-        <nav className="">
-            <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <nav className="pointer-event-auto sticky top-0">
+            <div className="md:container mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-between">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                         <button type="button" className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
@@ -39,19 +37,19 @@ function Nav( { navigationLinks }: NavBarProps ) {
                     </div>
                     <div className="flex flex-1 justify-between">
                         <div className="flex flex-1 flex-shrink-0 items-center">
-                            <Nav.Brand brandImage={Me} brandName="Kipp0" />
+                            {/* <Navbar.Brand brandImage={Me} brandName="Kipp0" /> */}
                         </div>
                         <div className={"hidden sm:block flex flex-1"}>
-                            <div className={helpers.join.classNames( "menu inline-flex space-x-4 w-full justify-center", styles.menu ?? '' )} >
+                            <div className={helpers.join.classNames( "menu inline-flex space-x-4 w-full justify-center bg-white border border-gray-200 rounded drop-shadow-md", styles.menu ?? '' )} >
                                 {
                                     navigationLinks.map( ( link, idx ) => (
-                                        <Nav.Link key={idx} href={link.href} current={`${router.pathname}` === link.href ? true : false} className="px-3 py-2 text-sm font-medium navBarLink">{link.name}</Nav.Link>
+                                        <Navbar.Link key={idx} href={link.href} current={`${router.pathname}` === link.href} className="px-3 py-2 text-sm font-medium NavbarLink">{link.name}</Navbar.Link>
                                     ) )
                                 }
                             </div>
                         </div>
-                        <div className="flex flex-1 flex-shrink-0 items-center justify-end">
-                            <Nav.Brand brandImage={Me} brandName="Kipp0" />
+                        <div className="flex flex-1 flex-shrink-0 items-center">
+                            <></>
                         </div>
                     </div>
                 </div>
@@ -61,7 +59,7 @@ function Nav( { navigationLinks }: NavBarProps ) {
                 <div className="space-y-1 px-2 pt-2 pb-3">
                     {
                         navigationLinks.map( ( link, idx ) => (
-                            <Nav.Link key={idx} href={link.href} current={link.current} className="px-3 py-2 rounded-md text-sm font-medium">{link.name}</Nav.Link>
+                            <Navbar.Link key={idx} href={link.href} current={`${router.pathname}` === link.href} className="px-3 py-2 rounded-md text-sm font-medium">{link.name}</Navbar.Link>
                         ) )
                     }
                 </div>
@@ -70,7 +68,7 @@ function Nav( { navigationLinks }: NavBarProps ) {
     )
 }
 
-Nav.Link = NavLink
-Nav.Brand = NavbarBrand
+Navbar.Link = NavLink
+Navbar.Brand = NavbarBrand
 
-export default Nav
+export default Navbar
