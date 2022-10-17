@@ -115,9 +115,9 @@ const Home: NextPage = () => {
 
           </div>
         </section>
-        <section className="mt-16 sm:mt-20 px-10 sm:px-8">
+        <section className="mt-16 sm:mt-20 px-10 sm:px-5">
           <div className="grid gid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
-            <div className="lg:pl-20">
+            <div className="lg:pl-20 flex justify-center">
               <div className="max-w-sm px-2.5 lg:max-w-none">
                 <Image
                   src={Me}
@@ -130,15 +130,17 @@ const Home: NextPage = () => {
                   alt="Picture of Pierre" />
               </div>
             </div>
-            <div className="lg:order-first lg:row-span-2">
-              <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-2 text-gray-700">Pierre N. Smith</h1>
-              <h2 className="font-bold text-xl md:text-2xl tracking-tight text-gray-700">Entreprenueur & Software Engineer by day.</h2>
-              <h2 className="font-bold text-xl md:text-2xl tracking-tight text-gray-700 mb-1">Amateur Artist By Night.</h2>
+            <div className="lg:order-first lg:row-span-2 flex flex-col justify-center">
+              <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-2 text-gray-700 lg:mb-10 mb-5">Pierre N. Smith</h1>
+              <div className=" lg:flex lg:mb-5 mb-3">
+                <h2 className="font-bold text-xl md:text-2xl tracking-tight text-gray-700">Entreprenueur & Software Engineer by day.</h2>
+                <h2 className="font-bold text-xl md:text-2xl tracking-tight text-gray-700 mb-1">Amateur Artist By Night.</h2>
+              </div>
               <p className="text-md md:text-lg tracking-tight text-gray-700">Developing technologies that empower clients to reach for the stars!</p>
             </div>
           </div>
         </section>
-        <section className="w-full px-10">
+        <section className="w-full mt-16 sm:mt-20 px-10 sm:px-5">
           <div className="rounded p-10 border border-zinc-100">
 
             <h3 className="flex text-lg font-semibold text-zinc-900">Work</h3>
@@ -159,21 +161,6 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-        {/* <section className="mt-16 sm:mt-20 px-10 w-full">
-          <div className="grid gap-3 pt-3 mt-3 text-center md:grid-cols-3 lg:w-2/3">
-            <TechCard
-              name="Frontend"
-              description="frontend stuff"
-            />
-            <TechCard name="Backend"
-              description="Backend stuff"
-            />
-            <TechCard
-              name="Development"
-              description=""
-            />
-          </div>
-        </section> */}
       </main>
       <Footer />
     </>
