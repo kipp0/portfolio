@@ -1,8 +1,6 @@
-import React from "react";
 import Image from 'next/future/image'
 import Link from "next/link";
 import { StaticImageData } from "next/image";
-import { LinkProps } from "../../../types/primitives";
 
 
 type NavBarBrandProps = {

@@ -16,6 +16,8 @@ import image5 from '../assets/carousel/site4.png'
 import WorkHistoryCards from "../components/WorkHistoryCards";
 import Button from "../components/Button/Button";
 import Footer from "../components/Footer/Footer";
+import ShowCard from '../components/ShowCard'
+
 const work: WorkHistoryCards.WorkHistory[] = [
   {
     logo: webbly,
@@ -52,67 +54,11 @@ const Home: NextPage = () => {
       <main className="relative ring ring-zinc-100 inset-0 bg-white max-w-6xl m-auto flex flex-col items-center justify-center min-h-screen p-4 rounded ">
         <section className="mt-16 sm:mt-20">
           <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-            <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl rotate-2">
-
-              <Image alt=""
-                src={image1}
-                sizes="(min-width: 640px) 18rem, 11rem"
-                width="3744"
-                height="5616"
-                decoding="async"
-                data-nimg="future"
-                className="absolute inset-0 h-full w-full object-cover"
-                loading="lazy" />
-            </div>
-            <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl -rotate-2">
-              <Image alt=""
-                sizes="(min-width: 640px) 18rem, 11rem"
-                src={image2}
-                width="3936"
-                height="2624"
-                decoding="async"
-                data-nimg="future"
-                className="absolute inset-0 h-full w-full object-cover"
-                loading="lazy"
-              />
-
-            </div>
-            <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl rotate-2">
-              <Image alt="" sizes="(min-width: 640px) 18rem, 11rem"
-                src={image3}
-                width="5760"
-                height="3840"
-                decoding="async"
-                data-nimg="future"
-                className="absolute inset-0 h-full w-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl rotate-2">
-              <Image alt=""
-                sizes="(min-width: 640px) 18rem, 11rem"
-                src={image4}
-                width="2400"
-                height="3000"
-                decoding="async"
-                data-nimg="future"
-                className="absolute inset-0 h-full w-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl -rotate-2">
-              <Image alt=""
-                sizes="(min-width: 640px) 18rem, 11rem"
-                src={image5}
-                width="4240"
-                height="2384"
-                decoding="async"
-                data-nimg="future"
-                className="absolute inset-0 h-full w-full object-cover"
-                loading="lazy"
-              />
-            </div>
-
+            <ShowCard image={image1} className='rotate-2 hover:rotate-0 transform-gpu' />
+            <ShowCard image={image2} className='rotate-3 hover:rotate-0 transform-gpu' />
+            <ShowCard image={image3} className='rotate-6 hover:rotate-0 transform-gpu' />
+            <ShowCard image={image4} className='rotate-3 hover:rotate-0 transform-gpu' />
+            <ShowCard image={image5} className='rotate-2 hover:rotate-0 transform-gpu' />
           </div>
         </section>
         <section className="mt-16 sm:mt-20 px-10 sm:px-5">
