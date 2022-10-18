@@ -12,7 +12,7 @@ function NavLink( { href, current, className = '', children, ...props }: NavLink
     const stateClasses = current ? 'text-gray-900' : 'text-gray-700'
     const underline = current ? <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-gray-700/0 via-gray-700/40 to-gray-700/0"></span> : <></>
     return (
-        <Link href={href} aria-current="page" passHref>
+        <Link href={href} aria-current={current ? "page" : undefined} passHref>
             <a {...props} className={helpers.join.classNames( stateClasses, className, 'relative' )}>
                 {children}
                 {underline}
